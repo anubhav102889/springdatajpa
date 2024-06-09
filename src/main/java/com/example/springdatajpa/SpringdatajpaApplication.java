@@ -23,6 +23,7 @@ public class SpringdatajpaApplication {
     public static void main(String[] args) {
 
         ApplicationContext applicationContext = SpringApplication.run(SpringdatajpaApplication.class, args);
+        System.out.println("start");
         CustomerCriteriaQueryService customerCriteriaQueryService = applicationContext.getBean(CustomerCriteriaQueryService.class);
         CustomerRepo customerRepo = applicationContext.getBean(CustomerRepo.class);
         UserRepo userRepo = applicationContext.getBean(UserRepo.class);
