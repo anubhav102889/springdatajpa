@@ -21,6 +21,7 @@ public class CustomerController {
     public ResponseEntity<Object> customerResponseProjection(@PathVariable(value = "id") Integer id,
                                                              @RequestParam(value = "strb", required = false) StringBuilder stringBuilder,
                                                              @RequestHeader HttpHeaders requestHeaders) {
+        System.out.println("");
         System.out.println(requestHeaders);
         CustomerResponseProjection customerResponseProjection= customerService.customerResponseProjection(id);
         if(Objects.isNull(customerResponseProjection)){
